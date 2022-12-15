@@ -8,13 +8,16 @@
 
 # {'А': ['Алина'], 'Б': ['Бибочка'], 'И': ['Иван', 'Илья'], 'М': ['Марина', 'Мария'], 'П': ['Петр', 'Петр']}
 
-def thesaurus(*names):
-    res = {}
-    for name in names:
-        key = name[0].capitalize()
-        if key not in res:
-            res[key] = []
-        res[key].append(name)
-    return res
+def thesaurus(*names)name_list = "Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"
+print(name_list)
 
-print(thesaurus("Иван", "Мария", "Петр", "Илья", "Марина", "Петр", "Алина", "Бибочка"))
+dictionary = {}
+
+for name in name_list:
+    key = name[0]
+
+    if key not in dictionary:
+        dictionary[key] = []
+    dictionary[key].append(name)
+
+print (dictionary)
